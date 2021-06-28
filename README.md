@@ -1,1 +1,1 @@
-# Social.Fi
+# SocialFi

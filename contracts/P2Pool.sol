@@ -271,7 +271,13 @@ contract P2Pool is VersionedInitializable, IP2Pool, P2PoolStorage {
 
         _ious[_iousCount] = iou;
         userData.activeIOUAmount = userData.activeIOUAmount + 1;
-        emit CreateIOU(msg.sender, _iousCount, iou.reserve, iou.needAmount);
+        emit CreateIOU(
+            msg.sender,
+            iou.circleId,
+            _iousCount,
+            iou.reserve,
+            iou.needAmount
+        );
         _iousCount += 1;
     }
 

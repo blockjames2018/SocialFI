@@ -15,7 +15,7 @@ interface IP2Pool {
      **/
     event CreateCircle(
         address indexed user,
-        uint256 id,
+        uint256 indexed id,
         string name,
         string desc
     );
@@ -58,14 +58,16 @@ interface IP2Pool {
     /**
      * @dev Emitted on createIOU()
      * @param user The address of the borrower
+     * @param circleId The id of the circle
      * @param iouId The id of the IOU
      * @param reserve The address of the borrow reserve
      * @param borrowAmount The amount of borrowings
      **/
     event CreateIOU(
         address indexed user,
+        uint256 indexed circleId,
         uint256 indexed iouId,
-        address indexed reserve,
+        address reserve,
         uint256 borrowAmount
     );
 
